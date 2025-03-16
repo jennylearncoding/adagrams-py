@@ -1,4 +1,4 @@
-import random
+import random 
 from random import randint
 
 
@@ -41,7 +41,8 @@ def draw_letters():
 #creat a list with user's random letter
     letter_bank = []
     while len(letter_bank) < 10:
-        user_letter = random.choice(letter_pool)
+        draw = random.randint(0, len(letter_pool)-1)
+        user_letter = letter_pool[draw]
         letter_bank.append(user_letter)
         letter_pool.remove(user_letter)  
     return letter_bank
